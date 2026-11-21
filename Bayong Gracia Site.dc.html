@@ -7,17 +7,17 @@
 </head>
 <body>
 <x-dc>
-<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"><style>body{margin:0;background:#F3EBDD;font-family:'Averia Serif Libre',Georgia,serif;color:#1D1A17}a{color:#6B1A24;text-decoration:none}a:hover{color:#1D1A17}button,input,textarea,select{font-family:inherit}button{cursor:pointer}input:focus,textarea:focus{outline:2px solid #6B1A24;outline-offset:1px}@keyframes bgUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}@keyframes bgFade{from{opacity:0}to{opacity:1}}@keyframes bgSlideIn{from{transform:translateX(100%)}to{transform:none}}@keyframes bgDrop{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}@keyframes bgSway{from{transform:rotate(-5deg)}to{transform:rotate(4deg)}}@keyframes bgZoom{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes bgMarq{to{transform:translateX(-50%)}}@keyframes bgBanig{to{background-position:140px 0}}@keyframes bgFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style></helmet>
-<div style="min-height:100vh;display:flex;flex-direction:column">
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"><style>html,body{overflow-x:hidden}body{margin:0;-webkit-text-size-adjust:100%;background:#F3EBDD;font-family:'Averia Serif Libre',Georgia,serif;color:#1D1A17}a{color:#6B1A24;text-decoration:none}a:hover{color:#1D1A17}button,input,textarea,select{font-family:inherit}button{cursor:pointer}input:focus,textarea:focus{outline:2px solid #6B1A24;outline-offset:1px}@keyframes bgUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}@keyframes bgFade{from{opacity:0}to{opacity:1}}@keyframes bgSlideIn{from{transform:translateX(100%)}to{transform:none}}@keyframes bgDrop{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}@keyframes bgSway{from{transform:rotate(-5deg)}to{transform:rotate(4deg)}}@keyframes bgZoom{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes bgMarq{to{transform:translateX(-50%)}}@keyframes bgBanig{to{background-position:140px 0}}@keyframes bgFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;zoom:{{ uiZoom }}">
 
 <div style="background:#6B1A24;color:#F3EBDD;overflow:hidden;padding:9px 0;font-size:13px;letter-spacing:.2em;text-transform:uppercase"><div style="display:flex;width:max-content;animation:bgMarq 32s linear infinite"><div style="display:flex;gap:28px;padding-right:28px;flex:none"><span>Libreng shipping sa ₱2,000 pataas</span><span style="color:#B8925A">◆</span><span>Gawa ng kamay sa Paniqui, Tarlac</span><span style="color:#B8925A">◆</span><span>Custom na pinta, mag-message lang</span><span style="color:#B8925A">◆</span><span>Mula 2018</span><span style="color:#B8925A">◆</span></div><div style="display:flex;gap:28px;padding-right:28px;flex:none"><span>Libreng shipping sa ₱2,000 pataas</span><span style="color:#B8925A">◆</span><span>Gawa ng kamay sa Paniqui, Tarlac</span><span style="color:#B8925A">◆</span><span>Custom na pinta, mag-message lang</span><span style="color:#B8925A">◆</span><span>Mula 2018</span><span style="color:#B8925A">◆</span></div></div></div>
 
 <header style="position:sticky;top:0;z-index:20;background:#F3EBDD;border-bottom:1px solid #D8C7A8">
 <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
 <div style="display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;padding:12px 16px">
-<button onClick="{{ openMenu }}" aria-label="Menu" style="justify-self:start;display:flex;align-items:center;gap:10px;min-height:44px;background:none;border:0;padding:0;font-size:16px;color:#1D1A17"><span style="display:grid;gap:5px;width:22px"><span style="height:1.5px;background:#1D1A17"></span><span style="height:1.5px;background:#1D1A17"></span><span style="height:1.5px;background:#1D1A17"></span></span>Menu</button>
+<button onClick="{{ openMenu }}" aria-label="Menu" style="justify-self:start;display:flex;align-items:center;gap:10px;min-height:44px;background:none;border:0;padding:0;font-size:16px;color:#1D1A17"><span style="display:grid;gap:5px;width:22px"><span style="height:1.5px;background:#1D1A17"></span><span style="height:1.5px;background:#1D1A17"></span><span style="height:1.5px;background:#1D1A17"></span></span></button>
 <button onClick="{{ goHome }}" aria-label="Bayong Gracia — Home" style="width:132px;aspect-ratio:1908/569;border:0;padding:0;background:#6B1A24;-webkit-mask:url(assets/logo.png) center/contain no-repeat;mask:url(assets/logo.png) center/contain no-repeat"></button>
-<button onClick="{{ openCart }}" style="justify-self:end;min-height:44px;white-space:nowrap;background:none;border:0;padding:0;font-size:16px;font-weight:700;color:#6B1A24">Bayong ({{ cartCount }})</button>
+<button onClick="{{ openCart }}" aria-label="Bayong ({{ cartCount }})" style="justify-self:end;position:relative;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;padding:0;color:#6B1A24"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.3 12H5.3z"></path><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"></path></svg><span style="position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:#6B1A24;color:#F3EBDD;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">{{ cartCount }}</span></button>
 </div>
 </sc-if>
 <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
@@ -52,24 +52,24 @@
 
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
 <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(18px,4vw,56px) clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,56px);align-items:center">
-<div style="display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;flex-direction:column;gap:26px;order:{{ heroOrder }};align-items:{{ heroAlign }};text-align:{{ heroTextAlign }}">
 <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#6B1A24;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both">Hinabi · Hand-painted · Paniqui, Tarlac</div>
-<h1 style="margin:0;font-weight:700;font-size:clamp(46px,6.2vw,80px);line-height:1;color:#6B1A24"><span style="display:block;animation:bgUp .9s .15s cubic-bezier(.2,.7,.2,1) both">Bawat bayong,</span><span style="display:block;animation:bgUp .9s .3s cubic-bezier(.2,.7,.2,1) both">may kuwento.</span></h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(36px,6.2vw,80px);line-height:1;color:#6B1A24"><span style="display:block;animation:bgUp .9s .15s cubic-bezier(.2,.7,.2,1) both">Bawat bayong,</span><span style="display:block;animation:bgUp .9s .3s cubic-bezier(.2,.7,.2,1) both">may kuwento.</span></h1>
 <p style="margin:0;font-weight:300;font-size:19px;line-height:1.6;max-width:460px;text-wrap:pretty;animation:bgUp .9s .45s cubic-bezier(.2,.7,.2,1) both">Mga bag na hinabi at ipininta ng kamay, kasama ang mga lokal na manghahabi at pintor. Makulay, matibay, at sinadyang gawin para sa araw-araw.</p>
-<div style="display:flex;flex-wrap:wrap;gap:14px;animation:bgUp .9s .6s cubic-bezier(.2,.7,.2,1) both"><button onClick="{{ goShop }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:17px 28px;font-size:13px;letter-spacing:.2em;border-radius:2px;transition:background .25s,transform .25s" style-hover="background:#561420;transform:translateY(-2px)" style-active="transform:scale(.97)">TINGNAN ANG KOLEKSYON</button><button onClick="{{ goCustom }}" style="background:none;border:1.5px solid #6B1A24;color:#6B1A24;padding:15px 26px;font-size:13px;letter-spacing:.2em;border-radius:2px;transition:background .25s,color .25s" style-hover="background:#6B1A24;color:#F3EBDD">CUSTOM NA PINTA</button></div>
+<div style="display:flex;flex-wrap:wrap;justify-content:{{ heroAlign }};gap:14px;animation:bgUp .9s .6s cubic-bezier(.2,.7,.2,1) both"><button onClick="{{ goShop }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:17px 28px;font-size:13px;letter-spacing:.2em;border-radius:2px;transition:background .25s,transform .25s" style-hover="background:#561420;transform:translateY(-2px)" style-active="transform:scale(.97)">TINGNAN ANG KOLEKSYON</button><button onClick="{{ goCustom }}" style="background:none;border:1.5px solid #6B1A24;color:#6B1A24;padding:15px 26px;font-size:13px;letter-spacing:.2em;border-radius:2px;transition:background .25s,color .25s" style-hover="background:#6B1A24;color:#F3EBDD">CUSTOM NA PINTA</button></div>
 </div>
 <div style="position:relative;overflow:hidden;animation:bgUp 1s .2s cubic-bezier(.2,.7,.2,1) both"><img src="assets/home-hero.jpg" alt="Mga hinabing bayong ng Bayong Gracia na may kahoy na hawakan" style="display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 45%;animation:bgZoom 16s ease-in-out infinite alternate"></img>
 <div style="position:absolute;top:clamp(16px,3vw,36px);right:clamp(16px,3vw,36px);width:124px;background:#6B1A24;color:#F3EBDD;padding:16px 14px 14px;display:flex;flex-direction:column;align-items:center;gap:9px;box-shadow:0 10px 24px rgba(29,26,23,.25);transform-origin:50% 0;animation:bgSway 3.2s ease-in-out infinite alternate"><div style="width:10px;height:10px;border-radius:50%;background:#F3EBDD"></div><div style="width:38px;height:40px;animation:bgFloat 3s ease-in-out infinite;background:#B8925A;-webkit-mask:url(assets/mark.png) center/contain no-repeat;mask:url(assets/mark.png) center/contain no-repeat"></div><div style="font-size:16px;text-align:center;line-height:1.15">Gawa sa Paniqui</div><div style="height:1px;width:100%;background:#B8925A"></div><div style="font-size:11px;letter-spacing:.2em">MULA 2018</div></div>
 </div>
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,56px)">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:1px solid #B8925A;border-bottom:1px solid #B8925A">
-<sc-for list="{{ pillars }}" as="pl" hint-placeholder-count="3"><div style="padding:30px 28px 30px 0;display:flex;flex-direction:column;gap:8px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ pl.delay }}"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ pl.title }}</div><div style="font-size:21px;line-height:1.3">{{ pl.body }}</div></div></sc-for>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px">
+<sc-for list="{{ pillars }}" as="pl" hint-placeholder-count="3"><div style="padding:26px 24px;background:#FBF6EC;border:1px solid #D8C7A8;border-radius:4px;box-shadow:0 6px 18px rgba(29,26,23,.06);display:flex;flex-direction:column;gap:8px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ pl.delay }}"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ pl.title }}</div><div style="font-size:21px;line-height:1.3">{{ pl.body }}</div></div></sc-for>
 </div>
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(18px,4vw,56px);display:flex;flex-direction:column;gap:32px">
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px"><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1.2">Mga paborito ngayong buwan</h2><button onClick="{{ goShop }}" style="background:none;border:0;padding:0;font-size:13px;letter-spacing:.2em;color:#6B1A24" style-hover="color:#1D1A17">LAHAT NG BAYONG →</button></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:28px 24px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px"><h2 style="margin:0;font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.2">Mga paborito ngayong buwan</h2><button onClick="{{ goShop }}" style="background:none;border:0;padding:0;font-size:13px;letter-spacing:.2em;color:#6B1A24" style-hover="color:#1D1A17">LAHAT NG BAYONG →</button></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(150px,22vw,240px),1fr));gap:28px clamp(14px,2vw,24px)">
 <sc-for list="{{ featured }}" as="p" hint-placeholder-count="4">
 <button onClick="{{ p.open }}" style="display:flex;flex-direction:column;gap:10px;background:none;border:0;padding:0;text-align:left;color:#1D1A17;transition:transform .35s cubic-bezier(.2,.7,.2,1);animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ p.delay }}" style-hover="transform:translateY(-6px)">
 <div style="position:relative;width:100%;aspect-ratio:4/5;background:#E6DAC4;overflow:hidden"><img src="{{ p.img }}" alt="{{ p.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:12px;left:12px;z-index:2;display:flex;align-items:center;gap:6px;background:{{ p.tagBg }};color:{{ p.tagFg }};font-size:11px;letter-spacing:.2em;padding:7px 11px 7px 9px;box-shadow:0 4px 10px rgba(29,26,23,.25);transform-origin:0 50%;animation:bgSway 2.8s ease-in-out infinite alternate"><span style="width:6px;height:6px;border-radius:50%;background:#F3EBDD;flex:none"></span>{{ p.tag }}</span></sc-if></div>
@@ -82,28 +82,28 @@
 <section style="background:#6B1A24;color:#F3EBDD">
 <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
 <div style="position:relative;min-height:420px;overflow:hidden;background:#561420"><img src="assets/honey-tess.png" alt="Si Honey Tess B. Alcantara sa Likha ng Central Luzon Trade Fair, hawak ang isang hinabing bag" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"></img></div>
-<div style="padding:clamp(40px,6vw,72px) clamp(24px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:22px;border-left:10px solid transparent;border-image:conic-gradient(from 45deg,#F3EBDD 25%,#6B1A24 0 50%,#F3EBDD 0 75%,#6B1A24 0) 1">
+<div style="padding:clamp(40px,6vw,72px) clamp(24px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:22px">
 <div style="font-size:13px;letter-spacing:.2em;color:#D8C7A8">ANG AMING KUWENTO · MULA 2018</div>
-<h2 style="margin:0;font-weight:400;font-size:clamp(30px,3.4vw,40px);line-height:1.2;text-wrap:balance">Mula sa pangarap ng isang guro sa Paniqui, Tarlac.</h2>
+<h2 style="margin:0;font-weight:400;font-size:clamp(26px,3.4vw,40px);line-height:1.2;text-wrap:balance">Mula sa pangarap ng isang guro sa Paniqui, Tarlac.</h2>
 <p style="margin:0;font-weight:300;font-size:18px;line-height:1.6;max-width:480px;text-wrap:pretty">Guro si Honey Tess B. Alcantara na may hilig sa fashion at negosyo. Noong 2018, itinayo niya ang Bayong Gracia — kasama ang mga lokal na manghahabi at pintor.</p>
 <button onClick="{{ goStory }}" style="align-self:flex-start;background:none;border:0;border-bottom:1px solid #B8925A;color:#F3EBDD;padding:0 0 6px;font-size:13px;letter-spacing:.2em" style-hover="border-color:#F3EBDD">BASAHIN ANG KUWENTO →</button>
 </div>
 </div>
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,80px) clamp(18px,4vw,56px);display:flex;flex-wrap:wrap;gap:24px 56px;align-items:center;justify-content:space-between">
-<div style="display:flex;flex-direction:column;gap:14px;max-width:560px"><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1.2">Gusto mo ng sariling pinta?</h2><p style="margin:0;font-weight:300;font-size:18px;line-height:1.6">Pangalan, bulaklak, o kulay ng inyong pamilya — ipipinta namin sa iyong bayong.</p></div>
+<div style="display:flex;flex-direction:column;gap:14px;max-width:560px"><h2 style="margin:0;font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.2">Gusto mo ng sariling pinta?</h2><p style="margin:0;font-weight:300;font-size:18px;line-height:1.6">Pangalan, bulaklak, o kulay ng inyong pamilya — ipipinta namin sa iyong bayong.</p></div>
 <button onClick="{{ goCustom }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:17px 28px;font-size:13px;letter-spacing:.2em;border-radius:2px;transition:background .25s" style-hover="background:#561420">MAGPAGAWA NG CUSTOM</button>
 </section>
 </sc-if>
 
 <sc-if value="{{ isShop }}" hint-placeholder-val="{{ false }}">
 <section style="max-width:1280px;margin:0 auto;padding:clamp(36px,5vw,56px) clamp(18px,4vw,56px) 88px;display:flex;flex-direction:column;gap:26px">
-<div style="display:flex;flex-direction:column;gap:10px;animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ shopCount }}</div><h1 style="margin:0;font-weight:700;font-size:clamp(40px,5vw,60px);line-height:1;color:#6B1A24">{{ shopTitle }}</h1><p style="margin:0;font-weight:300;font-size:17px;line-height:1.6;max-width:560px">Bawat isa ay hinabi at ipininta ng kamay — kaya bahagyang naiiba ang bawat piraso.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ shopCount }}</div><h1 style="margin:0;font-weight:700;font-size:clamp(32px,5vw,60px);line-height:1;color:#6B1A24">{{ shopTitle }}</h1><p style="margin:0;font-weight:300;font-size:17px;line-height:1.6;max-width:560px">Bawat isa ay hinabi at ipininta ng kamay — kaya bahagyang naiiba ang bawat piraso.</p></div>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-top:1px solid #D8C7A8;border-bottom:1px solid #D8C7A8">
 <div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ filters }}" as="f" hint-placeholder-count="5"><button onClick="{{ f.onClick }}" style="height:40px;padding:0 16px;border-radius:20px;border:1.5px solid #6B1A24;background:{{ f.bg }};color:{{ f.fg }};font-size:14px;transition:background .2s,color .2s">{{ f.label }}</button></sc-for></div>
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:14px"><span style="font-size:12px;letter-spacing:.2em">AYUSIN:</span><sc-for list="{{ sorts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="background:none;border:0;padding:6px 0;font-size:14px;color:{{ o.color }};border-bottom:1.5px solid {{ o.line }}">{{ o.label }}</button></sc-for></div>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:36px 24px">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(150px,22vw,240px),1fr));gap:36px clamp(14px,2vw,24px)">
 <sc-for list="{{ shopList }}" as="p" hint-placeholder-count="6">
 <button onClick="{{ p.open }}" style="display:flex;flex-direction:column;gap:10px;background:none;border:0;padding:0;text-align:left;color:#1D1A17;transition:transform .35s cubic-bezier(.2,.7,.2,1);animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ p.delay }}" style-hover="transform:translateY(-6px)">
 <div style="position:relative;width:100%;aspect-ratio:4/5;background:#E6DAC4;overflow:hidden"><img src="{{ p.img }}" alt="{{ p.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:12px;left:12px;z-index:2;display:flex;align-items:center;gap:6px;background:{{ p.tagBg }};color:{{ p.tagFg }};font-size:11px;letter-spacing:.2em;padding:7px 11px 7px 9px;box-shadow:0 4px 10px rgba(29,26,23,.25);transform-origin:0 50%;animation:bgSway 2.8s ease-in-out infinite alternate"><span style="width:6px;height:6px;border-radius:50%;background:#F3EBDD;flex:none"></span>{{ p.tag }}</span></sc-if></div>
@@ -129,7 +129,7 @@
 <div style="display:flex;flex-direction:column;gap:12px">
 <sc-if value="{{ prod.tag }}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;display:flex;align-items:center;gap:6px;background:{{ prod.tagBg }};color:{{ prod.tagFg }};font-size:11px;letter-spacing:.2em;padding:6px 10px 6px 8px"><span style="width:6px;height:6px;border-radius:50%;background:#F3EBDD"></span>{{ prod.tag }}</span></sc-if>
 <div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ prod.label }}</div>
-<h1 style="margin:0;font-weight:700;font-size:clamp(40px,4.4vw,56px);line-height:1;color:#6B1A24">{{ prod.name }}</h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1;color:#6B1A24">{{ prod.name }}</h1>
 <div style="font-size:26px">{{ unitPriceStr }}</div>
 </div>
 <p style="margin:0;font-weight:300;font-size:17px;line-height:1.6;text-wrap:pretty">{{ prod.desc }}</p>
@@ -154,7 +154,7 @@
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,56px) 88px;display:flex;flex-direction:column;gap:26px">
 <h2 style="margin:0;font-weight:400;font-size:28px;line-height:1.2">Baka magustuhan mo rin</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:28px 24px">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(150px,22vw,240px),1fr));gap:28px clamp(14px,2vw,24px)">
 <sc-for list="{{ related }}" as="p" hint-placeholder-count="4">
 <button onClick="{{ p.open }}" style="display:flex;flex-direction:column;gap:10px;background:none;border:0;padding:0;text-align:left;color:#1D1A17;transition:transform .35s cubic-bezier(.2,.7,.2,1);animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ p.delay }}" style-hover="transform:translateY(-6px)">
 <div style="position:relative;width:100%;aspect-ratio:4/5;background:#E6DAC4;overflow:hidden"><img src="{{ p.img }}" alt="{{ p.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><sc-if value="{{ p.tag }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:12px;left:12px;z-index:2;display:flex;align-items:center;gap:6px;background:{{ p.tagBg }};color:{{ p.tagFg }};font-size:11px;letter-spacing:.2em;padding:7px 11px 7px 9px;box-shadow:0 4px 10px rgba(29,26,23,.25);transform-origin:0 50%;animation:bgSway 2.8s ease-in-out infinite alternate"><span style="width:6px;height:6px;border-radius:50%;background:#F3EBDD;flex:none"></span>{{ p.tag }}</span></sc-if></div>
@@ -168,13 +168,13 @@
 <sc-if value="{{ isStory }}" hint-placeholder-val="{{ false }}">
 <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(18px,4vw,56px) 56px;display:flex;flex-direction:column;gap:22px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both">
 <div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">ANG AMING KUWENTO · PANIQUI, TARLAC</div>
-<h1 style="margin:0;font-weight:700;font-size:clamp(44px,6vw,80px);line-height:1;color:#6B1A24;max-width:900px;text-wrap:balance">Mula sa pangarap ng isang guro.</h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(34px,6vw,80px);line-height:1;color:#6B1A24;max-width:900px;text-wrap:balance">Mula sa pangarap ng isang guro.</h1>
 <p style="margin:0;font-weight:300;font-size:clamp(18px,1.8vw,21px);line-height:1.6;max-width:640px">Itinayo ni Honey Tess B. Alcantara ang Bayong Gracia noong 2018 — isang maliit na negosyo ng mga bag na hinabi at ipininta ng kamay.</p>
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,56px) 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,64px);align-items:center">
 <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E6DAC4"><img src="assets/honey-tess.png" alt="Si Honey Tess B. Alcantara, tagapagtatag ng Bayong Gracia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"></img><span style="position:absolute;left:14px;bottom:14px;font-size:12px;letter-spacing:.2em;background:#F3EBDD;padding:5px 9px">LIKHA NG CENTRAL LUZON · TRADE FAIR</span></div>
 <div style="display:flex;flex-direction:column;gap:20px">
-<h2 style="margin:0;font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1.2">Guro, mangangarap, negosyante.</h2>
+<h2 style="margin:0;font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.2">Guro, mangangarap, negosyante.</h2>
 <p style="margin:0;font-weight:300;font-size:18px;line-height:1.7">Guro si Honey Tess, pero matagal na niyang hilig ang fashion at pagnenegosyo. Sinubukan niya ang direct selling, networking, at pagbebenta ng bag — at hindi lahat ay nagtagumpay.</p>
 <p style="margin:0;font-weight:300;font-size:18px;line-height:1.7">Noong 2018, pinili niyang ituloy ang sariling pangarap: mga bag na personal na ginagawa kasama ang mga lokal na manghahabi at pintor — makulay, uso, at may kalidad na maipagmamalaki.</p>
 <p style="margin:0;font-size:22px;line-height:1.4;font-style:italic;color:#6B1A24">“Bawat bayong, may kuwento.”</p>
@@ -182,7 +182,7 @@
 </section>
 <section style="background:#6B1A24;color:#F3EBDD">
 <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(18px,4vw,56px);display:flex;flex-direction:column;gap:36px">
-<h2 style="margin:0;font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1.2">Paano lumago ang Bayong Gracia</h2>
+<h2 style="margin:0;font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.2">Paano lumago ang Bayong Gracia</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0">
 <sc-for list="{{ milestones }}" as="m" hint-placeholder-count="4"><div style="padding:24px 24px 24px 0;border-top:1px solid #B8925A;display:flex;flex-direction:column;gap:10px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:{{ m.delay }}"><div style="font-size:13px;letter-spacing:.2em;color:#D8C7A8">{{ m.k }}</div><div style="font-size:22px;line-height:1.25">{{ m.title }}</div><p style="margin:0;font-weight:300;font-size:16px;line-height:1.6">{{ m.body }}</p></div></sc-for>
 </div>
@@ -190,9 +190,9 @@
 </section>
 <div style="height:14px;background:conic-gradient(from 45deg,#6B1A24 25%,#D8C7A8 0 50%,#6B1A24 0 75%,#D8C7A8 0) 0 0/14px 14px;animation:bgBanig 8s linear infinite"></div>
 <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(18px,4vw,56px);display:flex;flex-direction:column;gap:32px">
-<h2 style="margin:0;font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1.2">Ano ang kakaiba sa amin</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:28px">
-<sc-for list="{{ values }}" as="v" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid #6B1A24"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ v.title }}</div><p style="margin:0;font-weight:300;font-size:17px;line-height:1.6">{{ v.body }}</p></div></sc-for>
+<h2 style="margin:0;font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.2">Ano ang kakaiba sa amin</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px">
+<sc-for list="{{ values }}" as="v" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:10px;padding:26px 24px;background:#FBF6EC;border:1px solid #D8C7A8;border-top:3px solid #6B1A24;border-radius:4px;box-shadow:0 6px 18px rgba(29,26,23,.06)"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ v.title }}</div><p style="margin:0;font-weight:300;font-size:17px;line-height:1.6">{{ v.body }}</p></div></sc-for>
 </div>
 <div style="position:relative;overflow:hidden"><img src="assets/home-hero.jpg" alt="Mga gawa ng Bayong Gracia" style="display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 40%"></img></div>
 <div style="display:flex;flex-wrap:wrap;gap:14px"><button onClick="{{ goShop }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:17px 28px;font-size:13px;letter-spacing:.2em;border-radius:2px" style-hover="background:#561420">TINGNAN ANG KOLEKSYON</button><button onClick="{{ goCustom }}" style="background:none;border:1.5px solid #6B1A24;color:#6B1A24;padding:15px 26px;font-size:13px;letter-spacing:.2em;border-radius:2px" style-hover="background:#6B1A24;color:#F3EBDD">MAGPAGAWA NG CUSTOM</button></div>
@@ -202,7 +202,7 @@
 <sc-if value="{{ isCustom }}" hint-placeholder-val="{{ false }}">
 <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,4vw,56px) 48px;display:flex;flex-direction:column;gap:20px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both">
 <div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">CUSTOM NA PINTA</div>
-<h1 style="margin:0;font-weight:700;font-size:clamp(44px,6vw,76px);line-height:1;color:#6B1A24;max-width:900px">Ipinta natin ang kuwento mo.</h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(34px,6vw,76px);line-height:1;color:#6B1A24;max-width:900px">Ipinta natin ang kuwento mo.</h1>
 <p style="margin:0;font-weight:300;font-size:19px;line-height:1.6;max-width:620px">Pangalan, paboritong bulaklak, o regalo para sa isang espesyal na tao — sabihin mo lang, at ipipinta namin ito sa iyong bayong.</p>
 </section>
 <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,56px) 56px">
@@ -236,7 +236,7 @@
 
 <sc-if value="{{ isHelp }}" hint-placeholder-val="{{ false }}">
 <section style="max-width:880px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,4vw,56px) 88px;display:flex;flex-direction:column;gap:28px;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both">
-<div style="display:flex;flex-direction:column;gap:14px"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">TULONG</div><h1 style="margin:0;font-weight:700;font-size:clamp(40px,5vw,60px);line-height:1;color:#6B1A24">Paano kami makakatulong?</h1></div>
+<div style="display:flex;flex-direction:column;gap:14px"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">TULONG</div><h1 style="margin:0;font-weight:700;font-size:clamp(32px,5vw,60px);line-height:1;color:#6B1A24">Paano kami makakatulong?</h1></div>
 <div style="display:flex;flex-direction:column;border-top:1px solid #D8C7A8">
 <sc-for list="{{ helpItems }}" as="d" hint-placeholder-count="5"><div style="border-bottom:1px solid #D8C7A8"><button onClick="{{ d.onClick }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;padding:20px 0;background:none;border:0;font-size:20px;color:#1D1A17;text-align:left"><span>{{ d.title }}</span><span style="color:#6B1A24">{{ d.sign }}</span></button><sc-if value="{{ d.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 22px;font-weight:300;font-size:17px;line-height:1.7;max-width:680px;animation:bgFade .3s both">{{ d.body }}</p></sc-if></div></sc-for>
 </div>
@@ -258,7 +258,7 @@
 </sc-if>
 <sc-if value="{{ loggedIn }}" hint-placeholder-val="{{ false }}">
 <div style="display:flex;flex-direction:column;gap:28px">
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px"><div style="display:flex;flex-direction:column;gap:10px"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">ACCOUNT</div><h1 style="margin:0;font-weight:700;font-size:clamp(36px,5vw,52px);line-height:1;color:#6B1A24">Kumusta, {{ userName }}!</h1><div style="font-weight:300;font-size:16px">{{ userEmail }}</div></div><button onClick="{{ doLogout }}" style="background:none;border:1.5px solid #6B1A24;color:#6B1A24;padding:12px 20px;font-size:12px;letter-spacing:.2em;border-radius:2px">MAG-LOGOUT</button></div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px"><div style="display:flex;flex-direction:column;gap:10px"><div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">ACCOUNT</div><h1 style="margin:0;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1;color:#6B1A24">Kumusta, {{ userName }}!</h1><div style="font-weight:300;font-size:16px">{{ userEmail }}</div></div><button onClick="{{ doLogout }}" style="background:none;border:1.5px solid #6B1A24;color:#6B1A24;padding:12px 20px;font-size:12px;letter-spacing:.2em;border-radius:2px">MAG-LOGOUT</button></div>
 <h2 style="margin:0;font-weight:400;font-size:26px">Mga order mo</h2>
 <sc-if value="{{ noOrders }}" hint-placeholder-val="{{ true }}"><div style="padding:28px;border:1px dashed #B8925A;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><span style="font-size:18px">Wala ka pang order.</span><button onClick="{{ goShop }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:14px 22px;font-size:12px;letter-spacing:.2em;border-radius:2px">MAMILI NA</button></div></sc-if>
 <sc-for list="{{ orderList }}" as="o" hint-placeholder-count="0"><div style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #D8C7A8"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ o.no }}</span><span style="font-size:17px">{{ o.summary }}</span></div><span style="font-size:13px;letter-spacing:.2em;background:#D8C7A8;padding:6px 10px">{{ o.status }}</span><span style="font-size:18px">{{ o.totalStr }}</span></div></sc-for>
@@ -269,7 +269,7 @@
 
 <sc-if value="{{ isCheckout }}" hint-placeholder-val="{{ false }}">
 <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(18px,4vw,56px) 88px;display:flex;flex-direction:column;gap:28px;animation:bgUp .7s cubic-bezier(.2,.7,.2,1) both">
-<h1 style="margin:0;font-weight:700;font-size:clamp(40px,5vw,56px);line-height:1;color:#6B1A24">Checkout</h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1;color:#6B1A24">Checkout</h1>
 <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:28px;border:1px dashed #B8925A;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><span style="font-size:18px">Wala pang laman ang bayong mo.</span><button onClick="{{ goShop }}" style="background:#6B1A24;color:#F3EBDD;border:0;padding:14px 22px;font-size:12px;letter-spacing:.2em;border-radius:2px">TINGNAN ANG KOLEKSYON</button></div></sc-if>
 <sc-if value="{{ cartHasItems }}" hint-placeholder-val="{{ true }}">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
@@ -298,7 +298,7 @@
 <section style="max-width:640px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,56px) 96px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;animation:bgUp .8s cubic-bezier(.2,.7,.2,1) both">
 <div style="width:72px;height:75px;background:#6B1A24;-webkit-mask:url(assets/mark.png) center/contain no-repeat;mask:url(assets/mark.png) center/contain no-repeat;animation:bgFloat 3s ease-in-out infinite"></div>
 <div style="font-size:13px;letter-spacing:.2em;color:#6B1A24">{{ lastOrderNo }}</div>
-<h1 style="margin:0;font-weight:700;font-size:clamp(40px,6vw,60px);line-height:1.05;color:#6B1A24">Salamat, {{ firstName }}!</h1>
+<h1 style="margin:0;font-weight:700;font-size:clamp(32px,6vw,60px);line-height:1.05;color:#6B1A24">Salamat, {{ firstName }}!</h1>
 <p style="margin:0;font-weight:300;font-size:18px;line-height:1.6">Sisimulan na naming ihanda ang bayong mo. Magme-message kami kapag naipadala na.</p>
 <div style="width:100%;border-top:1px solid #B8925A;border-bottom:1px solid #B8925A;padding:16px 0;display:flex;justify-content:space-between;font-size:18px"><span>{{ lastPay }}</span><span>{{ lastTotal }}</span></div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><button onClick="{{ goShop }}" style="height:52px;padding:0 24px;background:#6B1A24;color:#F3EBDD;border:0;border-radius:2px;font-size:12px;letter-spacing:.2em">BUMALIK SA SHOP</button><button onClick="{{ goAccount }}" style="height:52px;padding:0 22px;background:none;border:1.5px solid #6B1A24;color:#6B1A24;border-radius:2px;font-size:12px;letter-spacing:.2em">TINGNAN ANG ORDER</button></div>
@@ -523,6 +523,7 @@ class Component extends DCLogic {
     const firstName = (s.lastOrder && s.lastOrder.name.split(' ')[0]) || 'suki';
     return {
       isHome: pg === 'home', isShop: pg === 'shop', isProduct: pg === 'product', isStory: pg === 'story', isCustom: pg === 'custom', isHelp: pg === 'help', isAccount: pg === 'account', isCheckout: pg === 'checkout', isDone: pg === 'done',
+      uiZoom: s.mobile ? 0.82 : 1, heroOrder: s.mobile ? 2 : 0, heroAlign: s.mobile ? 'center' : 'flex-start', heroTextAlign: s.mobile ? 'center' : 'left',
       isMobile: !!s.mobile, isDesktop: !s.mobile, menuOpen: !!s.menuOpen && !!s.mobile,
       openMenu: () => this.setState({ menuOpen: true, cartOpen: false, searchOpen: false }), closeMenu: () => this.setState({ menuOpen: false }),
       menuItems: [['Home', () => this.go('home'), pg === 'home'], ...nav,
